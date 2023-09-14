@@ -11,7 +11,7 @@ class LikeController extends Controller
 {
     public function __invoke(Video $video)
     {
-        auth()->user()->like()->toggle($post->id);
+        auth()->user()->like()->toggle($video->id);
         return response()->json([
             'success' => true
             ]);
