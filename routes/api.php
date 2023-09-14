@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,5 @@ Route::post('/register',[StoreController::class, '__invoke']);
 
 Route::apiResources([
     'videos' => VideoController::class,
+    'likes' => LikeController::class,
 ]);
